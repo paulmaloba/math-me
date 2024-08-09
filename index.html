@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math & Me</title>
+    <link rel="stylesheet" href="math.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.2/math.min.js" ></script>
+</head>
+<body>
+    <header>
+        <h1>Math & Me</h1>
+        <nav>
+            <ul>
+                <li><a href="#trigonometry">Trigonometry</a> </li>
+                <li><a href="#arithmetic">Arithmetic</a></li>
+                <li><a href="#factorial">Factorial</a></li>
+                <li><a href="#logarithms">Logarithms</a></li>
+                <li><a href="#history">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <!--arithm section-->
+    <section id="arithmetic">
+        <h2>Basic Arithmetic</h2>
+        <input type="number" id="number1" placeholder="Enter first number">
+        <input type="number" id="number2" placeholder="Enter second number">
+        <div class="buttons">
+            <button>add</button>
+            <button>subtract</button>
+            <button>Multiply</button>
+            <button>Divide</button>
+        </div>
+         <div id="result"><p>Result: <span id="output"></span></p>
+        </div>      
+    </section>
+
+    <!--Trig section-->
+    <section id="trigonometry">
+        <h2>Trigonometry</h2>
+        <input type="number" id="angle" placeholder="Enter angle (degrees)">
+        <div class="buttons">
+            <button>Sine</button>
+            <button>Cosine</button>
+            <button>Tangent</button>
+        </div>
+        <div id="result-trig">
+            <p>Result:<span id="output-trig"></span></p>
+        </div>
+    </section>
+
+    <!--factorial section-->
+    <section id="factorial">
+        <h2>Factorial</h2>
+        <input type="number" id="factorial-input" placeholder="Enter a number">
+        <div class="buttons">
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+    </div>
+    <div id="results">
+    <p id="output-factorial"></p>
+</div>
+    </section>
+
+    <!--log section-->
+    <section id="logarithms">
+        <h2>logarithms</h2>
+        <input type="number" id="log-number" placeholder="Enter a number">
+        <input type="number" id="log-base" placeholder="Enter base (default is 10)">
+        <div class="buttons">
+        <button onclick="calculateLogarithm()">Calculate Logarithm</button>
+    </div>
+    <div id="results">
+        <p id="output-log"></p>
+    </div>
+    </section>
+
+    <!--Binary section-->
+    <section id="number-conversions">
+        <h2>Number Conversions</h2>
+        <input type="text" id="number-input" placeholder="Enter a number">
+        <select id="conversion-type">
+            <option value="binary">Binary</option>
+            <option value="octal">Octal</option>
+            <option value="decimal">Decimal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+        </select>
+        <div class="buttons">
+        <button onclick="convertNumber()">Convert</button></div>
+        <div class="results">
+        <p id="output-conversion"></p>
+    </div>
+    </section>
+
+    <!--circle-->
+    <section id="circle-calculations">
+        <h2>Circle</h2>
+        <input type="number" id="circle-radius" placeholder="Enter the radius">
+        <div class="buttons">
+        <button onclick="calculateCircle()">Calculate Area and Circumference</button>
+    </div>
+        <p id="loading-circle" style="display:none;">Calculating...</p>
+        <div id="results">
+           <p id="output-circle"></p>
+        </div>
+
+    </section>
+
+    <!--History section-->
+    <section id="history">
+        <h2>Calculation History</h2>
+        <div id="history-list"></div>
+        <div class="buttons">
+        <button onclick="clearHistory()">Clear History</button>
+    </div>
+    </section>
+</main>
+    <script src="ma.js"></script>
+</body>
+</html>
